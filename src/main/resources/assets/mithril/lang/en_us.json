@@ -12,5 +12,9 @@
   "block.mithril.mithril_ornamental": "Ornamental Mithril Block",
   "block.mithril.onyx": "Onyx",
   "block.mithril.raw_mithril_block": "Raw Mithril Block",
-  "block.mithril.smooth_onyx": "Smooth Onyx"
+  "block.mithril.smooth_onyx": "Smooth Onyx",
+  "item.mithril.mithril_helmet": "Mithril Helmet",
+  "item.mithril.mithril_chestplate": "Mithril Chestplate",
+  "item.mithril.mithril_leggings": "Mithril Leggings",
+  "item.mithril.mithril_boots": "Mithril Boots"
 }

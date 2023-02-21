@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "mithril:raw_mithril_block"}
+  ],
+  "result": {
+    "item": "mithril:raw_mithril",
+    "count": 9
+  }
+}

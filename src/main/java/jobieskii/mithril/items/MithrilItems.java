@@ -2,13 +2,14 @@ package jobieskii.mithril.items;
 
 import eu.pb4.polymer.core.api.item.PolymerItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.ArmorMaterial;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 
-import static jobieskii.mithril.Mithril.MITHRIL_TOOL_MATERIAL;
-import static jobieskii.mithril.Mithril.MODID;
+import static jobieskii.mithril.Mithril.*;
 
 public class MithrilItems {
     public static final PolymerItem MITHRIL_INGOT = Registry.register(Registries.ITEM, new Identifier(MODID, "mithril_ingot"),
@@ -25,6 +26,14 @@ public class MithrilItems {
             new MithrilShovel(MITHRIL_TOOL_MATERIAL, 3, -2.4f, new FabricItemSettings().rarity(Rarity.RARE)));
     public static final PolymerItem MITHRIL_HOE = Registry.register(Registries.ITEM, new Identifier(MODID, "mithril_hoe"),
             new MithrilHoe(MITHRIL_TOOL_MATERIAL, 3, -2.4f, new FabricItemSettings().rarity(Rarity.RARE)));
+    public static final MithrilArmor MITHRIL_HELMET = Registry.register(Registries.ITEM, new Identifier(MODID, "mithril_helmet"),
+            new MithrilArmor(MITHRIL_ARMOR_MATERIAL, EquipmentSlot.HEAD, new FabricItemSettings()));
+    public static final MithrilArmor MITHRIL_CHESTPLATE = Registry.register(Registries.ITEM, new Identifier(MODID, "mithril_chestplate"),
+            new MithrilArmor(MITHRIL_ARMOR_MATERIAL, EquipmentSlot.CHEST, new FabricItemSettings()));
+    public static final MithrilArmor MITHRIL_LEGGINGS = Registry.register(Registries.ITEM, new Identifier(MODID, "mithril_leggings"),
+            new MithrilArmor(MITHRIL_ARMOR_MATERIAL, EquipmentSlot.LEGS, new FabricItemSettings()));
+    public static final MithrilArmor MITHRIL_BOOTS = Registry.register(Registries.ITEM, new Identifier(MODID, "mithril_boots"),
+            new MithrilArmor(MITHRIL_ARMOR_MATERIAL, EquipmentSlot.FEET, new FabricItemSettings()));
 
     public static void init() {
 

@@ -6,6 +6,7 @@ import jobieskii.mithril.items.MithrilItems;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentLevelEntry;
+import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
@@ -19,6 +20,7 @@ public class Mithril implements ModInitializer {
     public static final String MODID = "mithril";
 
     public static final ToolMaterial MITHRIL_TOOL_MATERIAL = new MithrilToolMaterial();
+    public static final ArmorMaterial MITHRIL_ARMOR_MATERIAL = new MithrilArmorMaterial();
 
 
     @Override
