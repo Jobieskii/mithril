@@ -2,5 +2,15 @@
   "item.mithril.mithril_ingot": "Mithril Ingot",
   "item.mithril.raw_mithril": "Raw Mithril",
   "item.mithril.mithril_sword": "Mithril Sword",
-  "item.mithril.forged.tooltip": "Forged in Dragon Fire"
+  "item.mithril.mithril_pickaxe": "Mithril Pickaxe",
+  "item.mithril.mithril_shovel": "Mithril Shovel",
+  "item.mithril.mithril_axe": "Mithril Axe",
+  "item.mithril.mithril_hoe": "Mithril Hoe",
+  "block.mithril.cracked_onyx": "Cracked Onyx",
+  "block.mithril.mithril_block": "Mithril Block",
+  "block.mithril.mithril_ore": "Mithril Ore",
+  "block.mithril.mithril_ornamental": "Ornamental Mithril Block",
+  "block.mithril.onyx": "Onyx",
+  "block.mithril.raw_mithril_block": "Raw Mithril Block",
+  "block.mithril.smooth_onyx": "Smooth Onyx"
 }

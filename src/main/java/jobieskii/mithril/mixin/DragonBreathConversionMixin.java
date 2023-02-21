@@ -1,7 +1,6 @@
 package jobieskii.mithril.mixin;
 
-import jobieskii.mithril.Mithril;
-import net.minecraft.client.particle.Particle;
+import jobieskii.mithril.items.MithrilItems;
 import net.minecraft.entity.AreaEffectCloudEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -12,7 +11,6 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -33,12 +31,12 @@ abstract class DragonBreathConversionMixin extends Entity {
         if (t.getParticleType() == ParticleTypes.DRAGON_BREATH) {
             List<ItemEntity> itemEntities = t.world.getNonSpectatingEntities(ItemEntity.class, t.getBoundingBox());
             for (ItemEntity ie : itemEntities) {
-                if (ie.getStack().getItem() == Mithril.RAW_MITHRIL) {
+                if (ie.getStack().getItem() == MithrilItems.RAW_MITHRIL) {
                     NbtCompound nbt = ie.getStack().getOrCreateNbt();
                     int i = nbt.getInt("smoking");
                     if (i >= 60) {
                         int amount = ie.getStack().getCount();
-                        ItemStack newStack = ((Item)Mithril.MITHRIL_INGOT).getDefaultStack();
+                        ItemStack newStack = ((Item) MithrilItems.MITHRIL_INGOT).getDefaultStack();
                         newStack.setCount(amount);
                         ie.setStack(newStack);
                         t.world.playSound(

@@ -1,5 +1,6 @@
 package jobieskii.mithril;
 
+import jobieskii.mithril.items.MithrilItems;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
@@ -32,6 +33,6 @@ public class MithrilToolMaterial implements ToolMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems((ItemConvertible) Mithril.MITHRIL_INGOT);
+        return Ingredient.ofItems((ItemConvertible) MithrilItems.MITHRIL_INGOT);
     }
 }

@@ -4,6 +4,8 @@ import eu.pb4.polymer.core.api.item.PolymerItem;
 import eu.pb4.polymer.resourcepack.api.PolymerModelData;
 import eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils;
 import jobieskii.mithril.Mithril;
+import net.minecraft.block.Block;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -11,20 +13,18 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Identifier;
 import org.jetbrains.annotations.Nullable;
 
-public class RawMithril extends Item implements PolymerItem {
-    public static PolymerModelData modelData = PolymerResourcePackUtils.requestModel(Items.RAW_IRON, new Identifier(Mithril.MODID, "item/raw_mithril"));
-
-    public RawMithril(Item.Settings settings) {
-        super(settings);
-    }
+public class TexturedBlockItem extends BlockItem implements PolymerItem {
+    private final PolymerModelData md;
     @Override
     public Item getPolymerItem(ItemStack itemStack, @Nullable ServerPlayerEntity player) {
-        return Items.RAW_IRON;
+        return Items.COBBLED_DEEPSLATE;
     }
-
     @Override
     public int getPolymerCustomModelData(ItemStack itemStack, @Nullable ServerPlayerEntity player) {
-        return modelData.value();
+        return md.value();
     }
-
+    public TexturedBlockItem(Block block, Settings settings, String name) {
+        super(block, settings);
+        md = PolymerResourcePackUtils.requestModel(Items.COBBLED_DEEPSLATE, new Identifier(Mithril.MODID, "item/"+name));
+    }
 }

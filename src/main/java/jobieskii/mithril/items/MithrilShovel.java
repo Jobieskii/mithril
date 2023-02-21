@@ -4,39 +4,30 @@ import eu.pb4.polymer.core.api.item.PolymerItem;
 import eu.pb4.polymer.resourcepack.api.PolymerModelData;
 import eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils;
 import jobieskii.mithril.Mithril;
-import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.text.Text;
-import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.List;
+public class MithrilShovel extends ShovelItem implements PolymerItem {
 
-public class MithrilSword extends SwordItem implements PolymerItem {
+    public static PolymerModelData modelData = PolymerResourcePackUtils.requestModel(Items.IRON_SHOVEL, new Identifier(Mithril.MODID, "item/mithril_shovel"));
 
-    public static PolymerModelData modelData = PolymerResourcePackUtils.requestModel(Items.IRON_SWORD, new Identifier(Mithril.MODID, "item/mithril_sword"));
-
-    public MithrilSword(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
+    public MithrilShovel(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
         super(toolMaterial, attackDamage, attackSpeed, settings);
     }
 
     @Override
     public Item getPolymerItem(ItemStack itemStack, @Nullable ServerPlayerEntity player) {
-        return Items.IRON_SWORD;
+        return Items.IRON_SHOVEL;
     }
     @Override
     public int getPolymerCustomModelData(ItemStack itemStack, @Nullable ServerPlayerEntity player) {
         return modelData.value();
-    }
-    @Override
-    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.translatable("item.mithril.forged.tooltip").formatted(Formatting.DARK_PURPLE));
     }
 
     @Override

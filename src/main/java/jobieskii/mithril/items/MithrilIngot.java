@@ -19,7 +19,8 @@ import java.util.List;
 
 public class MithrilIngot extends Item implements PolymerItem {
 
-    public static PolymerModelData modelData = PolymerResourcePackUtils.requestModel(Items.IRON_INGOT, new Identifier(Mithril.MODID, "item/mithril_ingot"));;
+    public static PolymerModelData modelData = PolymerResourcePackUtils.requestModel(Items.IRON_INGOT, new Identifier(Mithril.MODID, "item/mithril_ingot"));
+
     public MithrilIngot(Settings settings) {
         super(settings);
     }
